@@ -1,0 +1,83 @@
+@baseFont: 10;
+.fsize(@sizeValue: @baseFont, @content: @baseFont) {
+    @remValue: @sizeValue/10;
+    font-size: ~"@{remValue}rem";
+}
+
+.transition(@prop: all, @duration: 0.25s, @ease: ease) {
+    -webkit-transition: @prop @duration @ease;
+    -moz-transition: @prop @duration @ease;
+    -ms-transition: @prop @duration @ease;
+    -o-transition: @prop @duration @ease;
+    transition: @prop @duration @ease;
+}
+.translate(@x: 0, @y: 0) {
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}
+
+.max-1700( @rules) {
+    @media only screen and (max-width: 1700px) {
+        @rules();
+    }
+}
+.max-1400( @rules) {
+    @media only screen and (max-width: 1400px) {
+        @rules();
+    }
+}
+.max-1220( @rules) {
+    @media only screen and (max-width: 1220px) {
+        @rules();
+    }
+}
+
+
+/* fonts */
+.ubuntulight {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 300;
+}
+.ubuntureg {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 400;
+}
+.ubuntumed {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 600;
+}
+.ubuntubold {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    font-weight: 700;
+}
+.rhinomed {
+    font-family: 'CoreRhino', sans-serif;
+    font-weight: 600;
+}
+.rhinobold {
+    font-family: 'CoreRhino', sans-serif;
+    font-weight: 700;
+}
+.rhinoheavy {
+    font-family: 'CoreRhino', sans-serif;
+    font-weight: 900;
+}
+.rubiklight {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+.rubikmed {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+.robotolight {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+/* end fonts */
+
+
+@validateError: red;

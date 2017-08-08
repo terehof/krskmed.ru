@@ -1,0 +1,116 @@
+@import "variables";
+
+.page-header {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6vw;
+    background: rgba(0, 0, 0, 0.66);
+    .max-1700({
+        padding-left: 2vw;
+    });
+    &__logo {
+        display: inline-block;
+        width: 10.8rem;
+        height: 4.5rem;
+        background: url(../img/main-logo.png) center/100% no-repeat;
+        text-decoration: none;
+        .max-1400({
+            width: 9.6rem;
+            height: 4rem;
+        })
+    }
+    &__menu {
+        align-self: stretch;
+        display: flex;
+        a {
+            display: flex;
+            align-items: center;
+            padding: 0 2vw;
+            .ubuntumed;
+            color: #fff;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            .transition();
+            border-right: 1px solid #3c4650;
+            &:first-child {
+                border-left: 1px solid #3c4650;
+            }
+            &:hover {
+                color: #95e1d3;
+            }
+            .max-1700({
+                padding: 0 1vw;
+            });
+            .max-1400({
+                font-size: 1.4rem;
+            });
+            .max-1220({
+                font-size: 1.3rem;
+                text-align: center;
+            });
+        }
+    }
+    &__phone {
+        padding: 1rem 0;
+        .ubuntureg;
+        font-size: 1.5rem;
+        color: #fff;
+        a {
+            display: block;
+            margin: 0 0 0.1rem;
+            .rhinobold;
+            font-size: 2.4rem;
+            color: #fff;
+            letter-spacing: -0.04em;
+            text-decoration: none;
+            .max-1400({
+                font-size: 2rem;
+            });
+            .max-1220({
+                font-size: 1.6rem;
+            })
+        }
+        .max-1400({
+            font-size: 1.3rem;
+        });
+        .max-1220({
+            padding: 1rem 0.5rem;
+            font-size: 1.1rem;
+            min-width: 16.4rem;
+        });
+    }
+    &__callback-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        min-width: 18rem;
+        width: 13vw;
+        background: #95e1d3;
+        color: #000000;
+        .ubuntumed;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        .transition();
+        &:hover {
+            background: #82efff;
+        }
+        .max-1400({
+            font-size: 1.4rem;
+        });
+        .max-1220({
+            min-width: 15rem;
+            font-size: 1.3rem;
+        })
+    }
+}

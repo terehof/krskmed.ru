@@ -1,0 +1,211 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100.1%;
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    outline: none;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+        width: 100.2%;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+
+@charset "UTF-8";
+
+// Default Variables
+
+@slick-font-path: "./fonts/";
+@slick-font-family: "slick";
+@slick-loader-path: "./";
+@slick-arrow-color: white;
+@slick-dot-color: black;
+@slick-dot-color-active: @slick-dot-color;
+@slick-prev-character: "←";
+@slick-next-character: "→";
+@slick-dot-character: "•";
+@slick-dot-size: 6px;
+@slick-opacity-default: 0.75;
+@slick-opacity-on-hover: 1;
+@slick-opacity-not-active: 0.25;
+
+/* Slider */
+.slick-loading .slick-list{
+
+}
+
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 3.5rem;
+    width: 3.5rem;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    background: url(../img/slider-arrow.svg) no-repeat;
+    background-size: 2rem;
+    background-position: center;
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    transition: opacity 0.25s ease;
+    &:hover, &:focus {
+        opacity: 0.7;
+    }
+}
+
+.slick-prev:before, .slick-next:before {
+
+}
+
+.slick-prev {
+    transform: translate(0, -50%) rotate(180deg);
+    left: -4.5rem;
+}
+
+.slick-next {
+    right: -4.5rem;
+}
+
+/* Dots */
+
+.slick-dotted .slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+        position: relative;
+        display: inline-block;
+        margin: 0 3px;
+        padding: 0;
+        cursor: pointer;
+        button {
+            background: transparent;
+            display: block;
+            box-sizing: border-box;
+            padding: 0;
+            height: 1rem;
+            width: 1rem;
+            border: 1px solid #69c4c1;
+            border-radius: 50%;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            &:hover, &:focus {
+                background: #69c4c1;
+            }
+        }
+        &.slick-active button {
+            background: #69c4c1;
+        }
+    }
+}
+

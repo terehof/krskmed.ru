@@ -1,0 +1,77 @@
+.section-operation-types {
+    position: relative;
+    padding: 21rem 0 0;
+    height: 79.8rem;
+    background: url(../img/section-operations-types.jpg) center top / cover no-repeat;
+    -webkit-clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+    .container {
+        height: 100%;
+        position: relative;
+    }
+}
+.operation-types {
+
+}
+.operation-type {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    height: 5.2rem;
+    .ubuntumed;
+    font-size: 1.6rem;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#86d2d0+0,95e1d3+100 */
+    background: rgb(134,210,208); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(134,210,208,1) 0%, rgba(149,225,211,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(134,210,208,1) 0%,rgba(149,225,211,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(134,210,208,1) 0%,rgba(149,225,211,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86d2d0', endColorstr='#95e1d3',GradientType=1 ); /* IE6-9 */
+    i {
+        display: inline-block;
+        margin-right: 2.1rem;
+        width: 3rem;
+        height: 3rem;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    &.decrease {
+        top: -8%;
+        left: 56%;
+        i {
+            background-image: url(../img/icon-decrease.png);
+        }
+    }
+    &.increase {
+        top: 13.7%;
+        right: -1.4%;
+        i {
+            background-image: url(../img/icon-increase.png);
+        }
+    }
+    &.reconstruction {
+        top: 22.6%;
+        left: 52.8%;
+        i {
+            background-image: url(../img/icon-reconstruction.png);
+        }
+    }
+    &.brace {
+        top: 65.5%;
+        left: 73.5%;
+        i {
+            height: 3.2rem;
+            background-size: auto 100%;
+            background-image: url(../img/icon-brace.png);
+        }
+    }
+    &:hover {
+        background: #82efff;
+    }
+}

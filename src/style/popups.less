@@ -1,0 +1,379 @@
+.popup-member {
+    display: none;
+    width: 84.6rem;
+    padding: 0;
+    background-color: #1a323d;
+    color: #ffffff;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    will-change: opacity;
+    &.visible {
+        opacity: 1;
+    }
+    &__top {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        &:before {
+            content: '';
+            display: block;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+            background: url(../img/popup-member-top-bg.png) no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    &__img {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        width: 55.5%;
+        min-width: 55.5%;
+        height: 31.8rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &__info {
+        position: relative;
+        padding: 0 6rem;
+        z-index: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+        .name {
+          .rubiklight;
+          font-size: 2.4rem;
+        }
+        .descrip {
+          margin: 2rem 0 0;
+          .ubuntubold;
+          font-size: 1.5rem;
+        }
+    }
+    &__biography {
+        display: block;
+        width: 100%;
+        padding: 2.7rem 3rem 2.7rem 3rem;
+        font-size: 1.5rem;
+        .ubuntureg;
+        h4 {
+            .rubiklight;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            margin: 0.75em 0;
+        }
+    }
+    &__scroll-container {
+      position: relative;
+      height: 24.2rem;
+      padding-right: 3rem;
+    }
+    &__certificates {
+      padding: 1.7rem 2rem 5rem 3rem;
+      background-color: #22464e;
+      .title {
+        margin: 0 0 2rem;
+        .rubiklight;
+        font-size: 2rem;
+      }
+    }
+    &__form-wrap {
+        padding: 2rem 3rem;
+    }
+    &__form {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        .input-wrap {
+            position: relative;
+            display: flex;
+            width: 28%;
+            .input {
+                width: 100%;
+            }
+        }
+        .submit {
+            width: 41%;
+            height: 4.2rem;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label.error {
+            position: absolute;
+            bottom: -1.5rem;
+            left: 0;
+        }
+        .dispatch-message {
+            position: absolute;
+            width: 100%;
+            bottom: -2rem;
+            left: 0;
+        }
+    }
+}
+.certificates-slider {
+    .slick-slide {
+        margin-left: 1.5rem;
+        &:first-child {
+            margin-left: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .slick-prev, .slick-next {
+        z-index: 2;
+        background-size: 1.3rem;
+    }
+    .slick-next {
+        right: -1.8rem;
+    }
+    .slick-prev {
+        left: -3rem;
+    }
+    .slick-list {
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            width: 1.4rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #22464e;
+            z-index: 1;
+        }
+    }
+}
+
+.input-wrap {
+    display: inline-block;
+    label.error {
+        display: block;
+        color: @validateError;
+        font-size: 1.1rem;
+        .ubuntureg;
+    }
+}
+
+.popup {
+    display: none;
+    padding: 4rem 4.2rem 4rem;
+    color: #fff;
+    line-height: 1.4;
+    background: #1a323d;
+    &.popup-light {
+        background: #fff;
+        .popup-title {
+            color: #38393c;
+        }
+        .popup-subtitle {
+            color: #38393c;
+        }
+        .popup-privacy {
+            color: #38393c;
+        }
+    }
+}
+.popup-callback {
+    width: 56rem;
+    &.big {
+        //display: block;
+    }
+}
+.popup-feedback {
+    width: 56rem;
+}
+.popup-title {
+    color: #fff;
+    .rhinobold;
+    font-size: 4.5rem;
+    line-height: 1;
+    &.sm {
+        font-size: 4.3rem;
+    }
+}
+.popup-subtitle {
+    margin: 2rem 0 0;
+    .ubuntureg;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.popup-form {
+    margin: 2.4rem 0 0;
+}
+.popup-privacy {
+    margin: 1.7rem 0 0;
+    .robotolight;
+    font-size: 1.3rem;
+    color: #fff;
+    a {
+        color: #fff;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.dispatch-message {
+    display: none;
+    margin: 1rem 0 0;
+    text-align: center;
+    font-size: 1.5rem;
+    .ubuntureg;
+    &.success {
+        color: #53bcb9;
+    }
+    &.error {
+        color: @validateError;
+    }
+}
+.popup-text {
+    position: relative;
+    display: none;
+    width: 95rem;
+    padding: 6rem 3rem 12rem 48.5rem;
+    background-image: url(../img/popup-text-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    color: #fff;
+    .ubuntureg;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    will-change: opacity;
+    &.visible {
+        opacity: 1;
+    }
+    strong {
+        .ubuntubold;
+    }
+    p {
+        margin: 0.7em 0;
+    }
+    &__title {
+        .rubiklight;
+        font-size: 2.8rem;
+    }
+    &__subtitle {
+        .ubuntureg;
+        font-size: 1.2rem;
+    }
+    &__content {
+        margin: 2rem 0 0;
+        line-height: 1.4;
+        position: relative;
+        height: 22.5rem;
+        &.ps {
+            padding-right: 2.5rem;
+        }
+    }
+    &__form-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 3rem;
+        background: rgba(0, 0, 0, 0.43);
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.12;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1d67b7+0,95e1d3+100 */
+            background: rgb(29,103,183); /* Old browsers */
+            background: -moz-linear-gradient(left,  rgba(29,103,183,1) 0%, rgba(149,225,211,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left,  rgba(29,103,183,1) 0%,rgba(149,225,211,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  rgba(29,103,183,1) 0%,rgba(149,225,211,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d67b7', endColorstr='#95e1d3',GradientType=1 ); /* IE6-9 */
+        }
+    }
+    &__form {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        .input-wrap {
+            position: relative;
+            display: flex;
+            width: 24%;
+            .input {
+                width: 100%;
+            }
+        }
+        .submit {
+            width: 48.9%;
+            height: 4.2rem;
+            padding: 0;
+        }
+        label.error {
+            position: absolute;
+            bottom: -1.5rem;
+            left: 0;
+        }
+        .dispatch-message {
+            position: absolute;
+            width: 100%;
+            bottom: -1.7rem;
+            left: 0;
+        }
+    }
+}
+
+.popup-policy {
+    display: none;
+    width: 84.6rem;
+    background-color: #1a323d;
+    padding: 7rem 4rem 2.7rem 3rem;
+    //opacity: 0;
+    //transition: opacity 0.25s ease;
+    //will-change: opacity;
+    //&.visible {
+    //    opacity: 1;
+    //}
+}
+.jsPopupPolicy {
+    outline: none;
+}
+.policy-content {
+    position: relative;
+    //height: 50rem;
+    //max-height: 90vh;
+    color: #ffffff;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    .ubuntureg;
+    h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+    h3 {
+        font-size: 2.1rem;
+    }
+    h4 {
+        font-size: 1.9rem;
+    }
+    p {
+        margin: 0.7em 0;
+    }
+}
