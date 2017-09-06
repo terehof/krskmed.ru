@@ -1,5 +1,8 @@
 var app = app || {};
 app.main = {
+    fixedHeader: function () {
+        $('.page-header').scrollToFixed();
+    },
     augmentTabs: function () {
         var $tabs = $('.breast-augment-tabs');
         if ($tabs.length) {
@@ -22,6 +25,8 @@ app.main = {
         if ($compareSlider.length && jQuery().slick) {
             $compareSlider.slick({
                 dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
                 slidesToShow: 3,
                 slideToScroll: 1,
                 prevArrow: '<div class="slick-prev slick-arrow"></div>',
@@ -334,6 +339,8 @@ app.popups = {
         if (self.flags['sliderMember' + num]) {
             $certSlider.slick({
                 dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
                 slidesToShow: 6,
                 slidesToScroll: 1,
                 prevArrow: '<div class="slick-prev slick-arrow"></div>',
@@ -681,10 +688,11 @@ app.map = {
             zoom: 17
         });
 
+
         /* TODO: change marker url */
         var marker = new google.maps.Marker({
-            position: {lat: 56.010939, lng: 92.855038},
-            icon: 'http://terehov.space/psd2html/krskmed/img/map-marker.png'
+            position: {lat: 56.010474, lng: 92.854859},
+            icon: 'http://htmldev.pro/krskmed/img/map-marker.png'
         });
         marker.setMap(map);
     },
@@ -1031,6 +1039,7 @@ app.video = {
 };
 
 app.init = function () {
+    app.main.fixedHeader();
     app.main.augmentTabs();
     app.main.compareSlider();
     app.main.smallImageSlider();
